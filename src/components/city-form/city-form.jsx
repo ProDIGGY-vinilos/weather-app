@@ -2,6 +2,8 @@ import WeatherDetails from "components/weather-details/weather-details";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Api } from "../../api/api";
+import countries from "../../data/countries.json";
+import styles from "./city-form.module.css";
 
 const CityForm = () => {
     const [weatherData, setWeatherdata] = useState({
@@ -12,6 +14,7 @@ const CityForm = () => {
         "description": "",
         "icon": ""
     });
+    const [isLoaded, setIsLoaded] = useState(false);
 
     const { register, handleSubmit, formState: {errors} } = useForm(
         {
@@ -23,7 +26,7 @@ const CityForm = () => {
             }
         }
     );
-    
+
     const showWeather = (data) => {
         setWeatherdata({
             "temp": (data?.main?.temp - 273.15).toFixed(2),
@@ -36,15 +39,22 @@ const CityForm = () => {
     }
 
     const onSubmit = async (data) => {
-        console.log(JSON.stringify(data));
         const result = await Api(data);
-        console.log(result);
-        console.log(result.weather[0]);
-        showWeather(result);
+        if (data.city !== "" && data.country !== ""){
+            if (result.cod === "404") {
+                alert("City not found");
+                console.log(result);
+            } else {
+                showWeather(result);
+                setIsLoaded(true);
+            }
+        } else {
+            setIsLoaded(false);
+        }
     }
 
     return (
-        <>
+        <div className={styles.container}>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input
                     type="text"
@@ -53,17 +63,20 @@ const CityForm = () => {
                     {...register("city")}
                 />
                 {errors.city && <span>This field is required</span>}
-                <input
-                    type="text"
-                    name="country"
-                    placeholder="Country"
-                    {...register("country")}
-                />
+                <select name="country" {...register("country")}>
+                    {countries.map((country) => (
+                        <option key={country.code} value={country.code}>
+                            {country.name}
+                        </option>)
+                        )}
+                </select>
                 {errors.country && <span>This field is required</span>}
                 <input type="submit" />
             </form>
-            <WeatherDetails showWeather={weatherData} />
-        </>
+            {isLoaded ? (
+                <WeatherDetails showWeather={weatherData} />
+            ): <p>Please insert location</p>}
+        </div>
     )
 };
 

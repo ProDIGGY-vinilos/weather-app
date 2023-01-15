@@ -11,7 +11,7 @@ export const Api = async (dataform) => {
                 if (data.cod === 200) {
                     return data;
                 } else {
-                    return data.message;
+                    return data;
                 }
             })
     } catch (error) {

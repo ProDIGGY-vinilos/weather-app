@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  border: 1px solid #000;
+}
+
+.detailsList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.details {
+  flex: 1 1 49%;
+}
