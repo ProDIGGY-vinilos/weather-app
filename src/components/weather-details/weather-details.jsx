@@ -8,9 +8,9 @@ const WeatherDetails = (weatherData) => {
     }
     return (
         <div className={styles.container}>
-            <div>Weather Details</div>
-            <div><img src={iconurl} alt="Weather icon"></img></div>
-            <div className={styles.details}>Description: {weatherData.showWeather.description}</div>
+            <h2>Weather Details</h2>
+            <div><img src={iconurl} alt="Weather icon" className={styles.icon}></img></div>
+            <div className={styles.description}>{weatherData.showWeather.description}</div>
             <div className={styles.detailsList}>
             <div className={styles.details}>Temp: °{weatherData.showWeather.temp}</div>
             <div className={styles.details}>Feels Like: °{ weatherData.showWeather.feels_like}</div>

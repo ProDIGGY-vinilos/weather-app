@@ -4,5 +4,48 @@
     align-items: center;
     text-align: center;
     width: 80%;
-    border: 1px solid #000;
+    height: 350px;
+    border: 1px solid blue;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border: 1px solid red;
+}
+
+.formInput {
+    box-sizing: border-box;
+    width: 450px;
+    height: 40px;
+    padding: 0px 0px;
+    font-size: 19px;
+}
+
+.weatherContainer{
+    border: 1px solid green;
+    width: 100%;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.placeholder {
+    color: #666;
+    background-color: rgb(238, 238, 238);
+}
+
+select:required:invalid {
+    color: #666;
+}
+
+option {
+    color: #000;
 }
