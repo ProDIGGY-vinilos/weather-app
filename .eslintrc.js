@@ -6,8 +6,8 @@ module.exports = {
 	extends: [
 		'plugin:react/recommended',
 		'plugin:react/jsx-runtime',
-		'eslint-config-prettier',
 		'standard',
+		'eslint-config-prettier',
 	],
 	overrides: [],
 	parserOptions: {
@@ -15,7 +15,5 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: ['react'],
-	rules: {
-		ident: ['no', 'tab'],
-	},
+	rules: {},
 };

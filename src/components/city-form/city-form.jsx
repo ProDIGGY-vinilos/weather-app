@@ -1,5 +1,5 @@
 import WeatherDetails from 'components/weather-details/weather-details';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Api } from '../../api/api';
 import countries from '../../data/countries.json';

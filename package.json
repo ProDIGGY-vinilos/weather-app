@@ -46,6 +46,8 @@
 		"eslint-plugin-n": "^15.6.1",
 		"eslint-plugin-promise": "^6.1.1",
 		"eslint-plugin-react": "^7.32.1",
-		"prettier": "^2.8.3"
+		"path-browserify": "^1.0.1",
+		"prettier": "^2.8.3",
+		"react-app-rewired": "^2.2.1"
 	}
 }
