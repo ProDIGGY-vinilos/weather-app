@@ -16,6 +16,6 @@ module.exports = {
 	},
 	plugins: ['react'],
 	rules: {
-		'no-tabs': 'on',
+		ident: ['no', 'tab'],
 	},
 };

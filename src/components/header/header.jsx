@@ -7,7 +7,7 @@ const Header = () => {
 			<header>
 				<div className={styles.container}>
 					<nav className={styles.nav}>
-						<p>Welcome to my weather app</p>
+						<p>Welcome to my weather app :)</p>
 					</nav>
 				</div>
 			</header>
