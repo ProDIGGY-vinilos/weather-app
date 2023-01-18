@@ -1,5 +1,5 @@
 export const Api = async (dataform) => {
-	const apiid = 'a77b26af89fb3e0c44badf288bdb979b';
+	const apiid = process.env.APIKEY;
 	const city = dataform.city;
 	const countryAb = dataform.country;
 	const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryAb}&APPID=${apiid}`;
