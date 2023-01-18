@@ -1,51 +1,110 @@
+/* change autofill colors */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px #f5edce inset !important;
+}
+
+/**/
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    height: 350px;
-    border: 1px solid blue;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: #f5edce;
+	width: 360px;
+	height: 100%;
+	/* border: 10px #58287f; */
+	box-shadow: 0px 0px 15px 5px #58287f;
+	border-radius: 5px;
 }
 
 .formContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+	margin: 10px;
+	width: 90%;
 }
 
-.formInput {
-    box-sizing: border-box;
-    width: 450px;
-    height: 40px;
-    padding: 0px 0px;
-    font-size: 19px;
+.formInput input,
+.formInput select {
+	box-sizing: border-box;
+	width: 260px;
+	height: 40px;
+	padding: 0px 10px;
+	margin-bottom: 5px;
+	font-size: 19px;
+	transition: all 0.4s;
+	background-color: #f5edce;
+	border: 2px solid #1a0000;
 }
 
-.weatherContainer{
-    border: 1px solid green;
-    width: 100%;
-}
-
-.btn {
-    width: 100px;
-    height: 40px;
-    font-size: 18px;
+.weatherContainer {
+	width: 90%;
+	margin-bottom: 5px;
 }
 
 .placeholder {
-    color: #666;
-    background-color: rgb(238, 238, 238);
+	color: #89c4e1;
+	background-color: #f5edce;
 }
 
 select:required:invalid {
-    color: #666;
+	color: #666;
 }
 
 option {
-    color: #000;
+	color: #1a0000;
+}
+
+/* CSS */
+.btn {
+	align-items: center;
+	align-self: flex-start;
+	background-color: #f5edce;
+	border: 2px solid #1a0000;
+	box-sizing: border-box;
+	color: #1a0000;
+	cursor: pointer;
+	display: inline-flex;
+	fill: #1a0000;
+	font-size: 16px;
+	font-weight: 600;
+	height: 85px;
+	justify-content: center;
+	letter-spacing: -0.8px;
+	line-height: 24px;
+	min-width: 80px;
+	margin-left: 5px;
+	outline: 0;
+	padding: 0 17px;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.4s;
+	-webkit-user-select: none;
+	user-select: none;
+	touch-action: manipulation;
+}
+
+.btn:focus {
+	color: #171e29;
+}
+
+.formInput:hover input,
+.formInput:hover select,
+.formInput:active input,
+.formInput:active select,
+.formInput:focus input,
+.formInput:focus select,
+.btn:hover,
+.btn:active {
+	border-color: #89c4e1;
+	color: #89c4e1;
+	fill: #89c4e1;
+	border-radius: 10px;
 }

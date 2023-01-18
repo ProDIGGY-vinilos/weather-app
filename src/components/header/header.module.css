@@ -1,6 +1,8 @@
 .container {
-  background-color: #afabab;
-  padding: 10px;
-  text-align: center;
-  width: 100vw;
+	background-color: #1a0000;
+	color: #f5edce;
+	padding: 10px;
+	text-shadow: 2px 2px #58287f;
+	text-align: center;
+	width: 100vw;
 }

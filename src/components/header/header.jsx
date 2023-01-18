@@ -1,18 +1,18 @@
-import React from "react";
-import styles from "./header.module.css";
+import React from 'react';
+import styles from './header.module.css';
 
 const Header = () => {
-    return (
-        <>
-        <header>
-            <div className={styles.container}>
-                <nav className={styles.nav}>
-                    <p>Welcome to my weather app</p>
-                    </nav>
-            </div>
-        </header>
-        </>
-    );
-    };
+	return (
+		<>
+			<header>
+				<div className={styles.container}>
+					<nav className={styles.nav}>
+						<p>Welcome to my weather app</p>
+					</nav>
+				</div>
+			</header>
+		</>
+	);
+};
 
 export default Header;
