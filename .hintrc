@@ -1,5 +1,13 @@
 {
   "extends": [
     "development"
+  ],
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not firefox <= 106",
+    "not safari <= 16",
+    "not firefox <= 107",
+    "not safari <= 16.1"
   ]
 }

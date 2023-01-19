@@ -1,11 +1,16 @@
 body {
 	margin: 0;
+	height: 100vh;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
 		'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: #1a0000;
 	color: #1a0000;
+	background-image: url('./assets/logoo.svg');
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-size: 200px;
 }
 
 code {
